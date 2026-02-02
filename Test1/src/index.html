@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ANGULAR Laza Phone Shop</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: #ff6a00;
+            padding: 12px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
+        .search-bar input {
+            padding: 7px;
+            width: 220px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .cart {
+            font-weight: bold;
+        }
+
+        /* BANNER */
+        .banner {
+            background: linear-gradient(to right, #ff6a00, #ff9a44);
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .banner h1 {
+            font-size: 36px;
+        }
+
+        /* PRODUCTS */
+        .container {
+            width: 90%;
+            margin: auto;
+        }
+
+        .section-title {
+            margin: 25px 0 10px;
+            font-size: 24px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        .price {
+            color: #ff6a00;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            background: #ff6a00;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #e65c00;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">LAZA</div>
+
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Categories</a>
+        <a href="#">Deals</a>
+        <a href="#">Account</a>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Search phones...">
+    </div>
+
+    <div class="cart">
+        🛒 Cart (<span id="cartCount">0</span>)
+    </div>
+</div>
+
+<!-- BANNER -->
+<div class="banner">
+    <h1>Big Sale on Smartphones 📱</h1>
+    <p>Up to 50% OFF | Cash on Delivery | Free Shipping</p>
+</div>
+
+<!-- PRODUCTS -->
+<div class="container">
+    <h2 class="section-title">🔥 Popular Phones</h2>
+
+    <div class="products">
+        <div class="card">
+            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6487/6487386_sd.jpg" alt="iPhone">
+            <h3>iPhone 14</h3>
+            <p class="price">₱55,000</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://i5.walmartimages.com/seo/Samsung-Galaxy-S23-Ultra-5G-SM-S918B-DS-256GB-12GB-RAM-DUAL-SIM-Global-Model-Factory-Unlocked-GSM-Phantom-Black_a77b9342-adda-4ed0-a9bd-2a3a80c29e21.9b9469de053b4157eb544c0267dbbca2.jpeg" alt="Samsung">
+            <h3>Samsung Galaxy S23</h3>
+            <p class="price">₱48,000</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://media.ldlc.com/r1600/ld/products/00/06/02/50/LD0006025029.jpg" alt="Xiaomi">
+            <h3>Xiaomi Redmi Note 12</h3>
+            <p class="price">₱15,000</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://toprealrankings.com/wp-content/uploads/realme-c55.jpg" alt="Realme">
+            <h3>Realme C55</h3>
+            <p class="price">₱12,500</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 LAZA | Online Shopping Philippines</p>
+</footer>
+
+<script>
+    let cart = 0;
+
+    function addToCart() {
+        cart++;
+        document.getElementById("cartCount").innerText = cart;
+    }
+</script>
+
+</body>
+</html>
