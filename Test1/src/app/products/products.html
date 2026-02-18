@@ -1,0 +1,27 @@
+<div class="notif-bar" [class.show]="showNotification">
+  🛒 {{ notificationMessage }}
+</div>
+
+<div class="hero">
+  <h1>Big Sale on Smartphones 📱</h1>
+  <p>Up to 50% OFF | Free Shipping</p>
+</div>
+
+<div class="categories">
+  <button (click)="selectedCategory='All'">All</button>
+  <button (click)="selectedCategory='Apple'">Apple</button>
+  <button (click)="selectedCategory='Samsung'">Samsung</button>
+  <button (click)="selectedCategory='Xiaomi'">Xiaomi</button>
+  <button (click)="selectedCategory='Realme'">Realme</button>
+</div>
+
+<div class="products">
+  <div class="card" *ngFor="let product of filteredProducts">
+    <img [src]="product.image">
+    <h3>{{ product.name }}</h3>
+    <p class="price">₱{{ product.price | number }}</p>
+    <button (click)="addToCart(product)">
+      Add to Cart
+    </button>
+  </div>
+</div>

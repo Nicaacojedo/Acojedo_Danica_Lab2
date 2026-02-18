@@ -1,0 +1,86 @@
+.hero {
+  background: linear-gradient(90deg, #ff6a00, #ff9248);
+  text-align: center;
+  padding: 50px;
+  color: white;
+}
+
+.categories {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.categories button {
+  margin: 5px;
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: none;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.categories button:hover {
+  background: #ff6a00;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 40px;
+  background: #f5f5f5;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 180px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.price {
+  color: #ff6a00;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.card button {
+  background: #ff6a00;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.notif-bar {
+  position: fixed;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 0 0 10px 10px;
+  transition: 0.4s ease;
+  z-index: 9999;
+}
+
+.notif-bar.show {
+  top: 0;
+}

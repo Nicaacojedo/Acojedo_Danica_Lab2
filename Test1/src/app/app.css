@@ -1,0 +1,29 @@
+.navbar {
+  background: linear-gradient(90deg, #ff6a00, #ff9248);
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-weight: 500;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.links a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.cart {
+  font-weight: bold;
+}
+
+.total {
+  margin-left: 10px;
+  font-weight: bold;
+}
